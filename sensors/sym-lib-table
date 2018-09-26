@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name utlities)(type Legacy)(uri /home/nagy/workspace/kicad/cominder_sensors/sensors/utlities.lib)(options "")(descr ""))
+)

@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name utilities)(type Legacy)(uri /home/nagy/workspace/kicad/cominder_sensors/mic/mic/utilities.lib)(options "")(descr ""))
+  (lib (name adc)(type Legacy)(uri /home/nagy/workspace/kicad/cominder_sensors/mic/mic/adc.lib)(options "")(descr ""))
+  (lib (name adcupdated)(type Legacy)(uri /home/nagy/workspace/kicad/cominder_sensors/mic/mic/adcupdated.lib)(options "")(descr ""))
+  (lib (name adc2)(type Legacy)(uri /home/nagy/workspace/kicad/cominder_sensors/mic/mic/adc2.lib)(options "")(descr ""))
+)

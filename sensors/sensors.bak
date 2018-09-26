@@ -1,0 +1,219 @@
+EESchema Schematic File Version 4
+LIBS:sensors-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor_Motion:MPU-6050 U2
+U 1 1 5BAB6657
+P 4200 2650
+F 0 "U2" H 4200 1864 50  0000 C CNN
+F 1 "MPU-6050" H 4200 1773 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.6mm" H 4200 1850 50  0001 C CNN
+F 3 "https://store.invensense.com/datasheets/invensense/MPU-6050_DataSheet_V3%204.pdf" H 4200 2500 50  0001 C CNN
+	1    4200 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 2850 3250 2850
+Text Label 3250 2850 0    50   ~ 0
+GND
+Wire Wire Line
+	4200 3350 4200 3700
+Text Label 4200 3700 0    50   ~ 0
+GND
+Wire Wire Line
+	4900 2950 5200 2950
+$Comp
+L Device:C C5
+U 1 1 5BABAE5C
+P 5350 2950
+F 0 "C5" V 5098 2950 50  0000 C CNN
+F 1 "0.1uF" V 5189 2950 50  0000 C CNN
+F 2 "" H 5388 2800 50  0001 C CNN
+F 3 "~" H 5350 2950 50  0001 C CNN
+	1    5350 2950
+	0    1    1    0   
+$EndComp
+Text Label 5500 2950 0    50   ~ 0
+GND
+Wire Wire Line
+	4900 2850 5100 2850
+$Comp
+L Device:C C4
+U 1 1 5BABAEC0
+P 5250 2850
+F 0 "C4" V 4998 2850 50  0000 C CNN
+F 1 "2.2nF" V 5089 2850 50  0000 C CNN
+F 2 "" H 5288 2700 50  0001 C CNN
+F 3 "~" H 5250 2850 50  0001 C CNN
+	1    5250 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 2850 5500 2850
+Wire Wire Line
+	5500 2850 5500 2750
+Text Label 5500 2750 0    50   ~ 0
+GND
+Wire Wire Line
+	4900 2350 5300 2350
+Text HLabel 5300 2350 2    50   Input ~ 0
+GYRO_INT
+Wire Wire Line
+	3500 2950 3300 2950
+Text Label 3300 2950 0    50   ~ 0
+GND
+$Comp
+L Regulator_Linear:MIC5205-2.8 U1
+U 1 1 5BABB34B
+P 1900 1400
+F 0 "U1" H 1900 1742 50  0000 C CNN
+F 1 "MIC5205-2.8" H 1900 1651 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 1900 1725 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/devicedoc/mic5205.pdf" H 1900 1400 50  0001 C CNN
+	1    1900 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 1700 1900 1800
+Text Label 1900 1800 0    50   ~ 0
+GND
+Wire Wire Line
+	1600 1300 1550 1300
+Wire Wire Line
+	1150 1300 1150 1250
+Wire Wire Line
+	1600 1400 1550 1400
+Wire Wire Line
+	1550 1400 1550 1300
+Connection ~ 1550 1300
+Wire Wire Line
+	1550 1300 1350 1300
+Wire Wire Line
+	2200 1300 2350 1300
+$Comp
+L power:+2V8 #PWR01
+U 1 1 5BABB753
+P 2350 1300
+F 0 "#PWR01" H 2350 1150 50  0001 C CNN
+F 1 "+2V8" H 2365 1473 50  0000 C CNN
+F 2 "" H 2350 1300 50  0001 C CNN
+F 3 "" H 2350 1300 50  0001 C CNN
+	1    2350 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+2V8 #PWR02
+U 1 1 5BABB92B
+P 4350 1500
+F 0 "#PWR02" H 4350 1350 50  0001 C CNN
+F 1 "+2V8" H 4365 1673 50  0000 C CNN
+F 2 "" H 4350 1500 50  0001 C CNN
+F 3 "" H 4350 1500 50  0001 C CNN
+	1    4350 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5BABBCA4
+P 4100 1600
+F 0 "C2" H 4050 1500 50  0000 R CNN
+F 1 "10nF" H 4150 1700 50  0000 R CNN
+F 2 "" H 4138 1450 50  0001 C CNN
+F 3 "~" H 4100 1600 50  0001 C CNN
+	1    4100 1600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4100 1450 4100 1350
+Text Label 4100 1350 0    50   ~ 0
+GND
+Wire Wire Line
+	3500 2550 3200 2550
+Wire Wire Line
+	3500 2450 3200 2450
+Wire Wire Line
+	3500 2350 3200 2350
+Text HLabel 3200 2350 0    50   BiDi ~ 0
+GYRO_SDA
+Text HLabel 3200 2450 0    50   Input ~ 0
+GYRO_SCL
+Text HLabel 3200 2550 0    50   Input ~ 0
+GYRO_SD0
+$Comp
+L Device:C C1
+U 1 1 5BABC7D9
+P 2450 1400
+F 0 "C1" V 2198 1400 50  0000 C CNN
+F 1 "470pF" V 2289 1400 50  0000 C CNN
+F 2 "" H 2488 1250 50  0001 C CNN
+F 3 "~" H 2450 1400 50  0001 C CNN
+	1    2450 1400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2200 1400 2300 1400
+Wire Wire Line
+	2600 1400 2600 1650
+Text Label 2600 1650 0    50   ~ 0
+GND
+Wire Wire Line
+	4300 1800 4300 1950
+Wire Wire Line
+	4100 1750 4100 1800
+$Comp
+L Device:C C3
+U 1 1 5BABD35B
+P 4450 1800
+F 0 "C3" V 4198 1800 50  0000 C CNN
+F 1 "0.1uF" V 4289 1800 50  0000 C CNN
+F 2 "" H 4488 1650 50  0001 C CNN
+F 3 "~" H 4450 1800 50  0001 C CNN
+	1    4450 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 1800 4750 1800
+Text Label 4750 1800 0    50   ~ 0
+GND
+Wire Wire Line
+	4350 1500 4350 1800
+Wire Wire Line
+	4350 1800 4300 1800
+Connection ~ 4300 1800
+Wire Wire Line
+	4300 1800 4100 1800
+Connection ~ 4100 1800
+Wire Wire Line
+	4100 1800 4100 1950
+NoConn ~ 4900 2550
+NoConn ~ 4900 2650
+Text HLabel 1150 1250 1    50   Input ~ 0
+VCC
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5BABEBB6
+P 1350 1300
+F 0 "#FLG?" H 1350 1375 50  0001 C CNN
+F 1 "PWR_FLAG" H 1350 1474 50  0000 C CNN
+F 2 "" H 1350 1300 50  0001 C CNN
+F 3 "~" H 1350 1300 50  0001 C CNN
+	1    1350 1300
+	1    0    0    -1  
+$EndComp
+Connection ~ 1350 1300
+Wire Wire Line
+	1350 1300 1150 1300
+$EndSCHEMATC
